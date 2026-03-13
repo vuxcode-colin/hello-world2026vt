@@ -1,0 +1,39 @@
+<meta name="color-scheme" content="dark">
+<button onclick="changeColor('blue')">blue</button>
+<button onclick="changeColor('red')">red</button>
+<button onclick="changeColor('#AF77B2')">#AF77B2</button>
+<button onclick="changeColor('firebrick')">firebrick</button>
+
+<button onclick="toggle()">Toggle</button>
+<h1 id="demo">Learning about Github</h1>`
+
+<script>
+  function changeColor(newColor) {
+    console.log(output);
+    output.style.color = newColor;
+    output.innerText = newColor;
+  }
+  
+  var hidden = false;
+  var output = document.getElementById("demo");
+
+  // Create a function to toggle the display of the output
+  function toggle() {
+    // Check if the output is hidden
+    if (hidden == true) {
+      // Show the output on the screen
+      output.style.display = "block";
+      // Change the "hidden" state variable (so that the toggle function can be used again)
+      hidden = false;
+    }
+    // Otherwise the hidden state would be false
+    else {
+      // Hide the output element
+      output.style.display = "none";
+      // We STILL need to change the hidden state variable
+      hidden = true;
+    }
+  }
+
+
+</script>
